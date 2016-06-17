@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AnimaForm</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<main>
+		<section class="buttons login-button-active">
+			<button class="login-button">
+				<a href="#" class="log-link login-button-active">Login</a>
+				<div class="login-underline login-underline-active"></div>
+			</button>
+			<button class="signup-button">
+				<a href="#" class="sign-link">Sign Up</a>
+				<div class="signup-underline signup-underline-inactive"></div>
+			</button>
+		</section>
+		<section class="forms">
+			<form id="shit" class="login-form show">
+				<fieldset>
+					<label for="email">E-mail</label>
+					<input id="email" type="email" name="email" required>
+					<label for="password">Password</label>
+					<input id="password" type="password" name="password" required>
+				</fieldset>
+				<input type="submit" name="login" value="Login">
+			</form>
+			<form class="signup-form">
+				<fieldset>
+					<label for="email">E-mail</label>
+					<input id="email" type="email" name="email" required>
+					<label for="password">Password</label>
+					<input id="password" type="password" name="password" required>
+					<label for="password">Confirm password</label>
+					<input id="password" type="password" name="password" required>
+				</fieldset>
+				<input type="submit" name="continue" value="Continue">
+			</form>
+		</section>
+	</main>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
