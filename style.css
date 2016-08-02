@@ -9,6 +9,7 @@ a {
 	text-decoration: none;
 }
 fieldset {border: none;}
+legend {display: none;}
 button, input {
 	border: none;
 	outline: none;
