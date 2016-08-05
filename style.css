@@ -4,12 +4,7 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-a {
-	color: #bbb;
-	text-decoration: none;
-}
 fieldset {border: none;}
-legend {display: none;}
 button, input {
 	border: none;
 	outline: none;
@@ -18,15 +13,8 @@ button, input {
 /* General */
 body {
 	width: 100%;
-	font-family: Roboto,sans-serif;
+	font-family: Roboto, sans-serif;
 	background: #3b4465;
-}
-section {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	width: 550px;
-	margin: 0 auto;
 }
 button {
 	position: relative;
@@ -75,13 +63,27 @@ input[type="submit"] {
 input[type="submit"]:hover {cursor: pointer;}
 
 /* Classes */
+.buttons, .forms {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 550px;
+	margin: 0 auto;
+}
 .buttons {
 	height: 100px;
 	padding-top: 70px;
 	text-align: center;
 }
+.log-link, .sign-link {
+	cursor: pointer;
+	color: #bbb;
+}
+.log-link.login-button-active, .sign-link.signup-button-active {
+	cursor: default;
+	color: #fff;
+}
 .login-underline, .signup-underline {
-	content: '';
 	position: absolute;
 	top: 35px;
 	left: 30px;
@@ -106,14 +108,8 @@ input[type="submit"]:hover {cursor: pointer;}
 	animation: signupUnderlineInactive .3s linear forwards;
 	transform-origin: left;
 }
-.login-button-active {
-	animation: buttonsMoveToRight .3s linear forwards;
-	color: #fff;
-}
-.signup-button-active {
-	animation: buttonsMoveToLeft .3s linear forwards;
-	color: #fff;
-}
+.login-button-active {animation: buttonsMoveToRight .3s linear forwards;}
+.signup-button-active {animation: buttonsMoveToLeft .3s linear forwards;}
 .forms {padding-top: 50px;}
 .login-form.login-button-active label, .login-form.login-button-active input {animation: fielsetSlideToRight .5s linear 0.25s forwards;}
 .signup-form.signup-button-active label, .signup-form.signup-button-active input {animation: fieldsetSlideToLeft .5s linear 0.25s forwards;}
@@ -173,20 +169,12 @@ input[type="submit"]:hover {cursor: pointer;}
 	}
 }
 @keyframes buttonsMoveToRight {
-	0% {
-		transform: translate(0);
-	}
-	100% {
-		transform: translate(50px);
-	}
+	0% {transform: translate(0);}
+	100% {transform: translate(50px);}
 }
 @keyframes buttonsMoveToLeft {
-	0% {
-		transform: translate(0);
-	}
-	100% {
-		transform: translate(-50px);
-	}
+	0% {transform: translate(0);}
+	100% {transform: translate(-50px);}
 }
 @keyframes fielsetSlideToRight {
 	0% {
@@ -261,7 +249,7 @@ input[type="submit"]:hover {cursor: pointer;}
 		z-index: 1;
 	}
 	50% {
-		transform: translate(0,);
+		transform: translate(0);
 		z-index: 10;
 	}
 	100% {

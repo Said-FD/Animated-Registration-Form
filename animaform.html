@@ -8,20 +8,19 @@
 </head>
 <body>
 	<main>
-		<section class="buttons login-button-active">
+		<div class="buttons login-button-active">
 			<button class="login-button">
-				<a href="#" class="log-link login-button-active">Login</a>
-				<div class="login-underline login-button-active"></div>
+				<span class="log-link login-button-active">Login</span>
+				<span class="login-underline login-button-active"></span>
 			</button>
 			<button class="signup-button">
-				<a href="#" class="sign-link">Sign Up</a>
-				<div class="signup-underline login-button-active"></div>
+				<span class="sign-link">Sign Up</span>
+				<span class="signup-underline login-button-active"></span>
 			</button>
-		</section>
-		<section class="forms">
+		</div>
+		<div class="forms">
 			<form class="login-form login-button-active">
 				<fieldset>
-					<legend>Login Form</legend>
 					<label for="login-email">E-mail</label>
 					<input id="login-email" type="email" name="email" required>
 					<label for="login-password">Password</label>
@@ -31,7 +30,6 @@
 			</form>
 			<form class="signup-form">
 				<fieldset>
-					<legend>Sign Up Form</legend>
 					<label for="signup-email">E-mail</label>
 					<input id="signup-email" type="email" name="email" required>
 					<label for="signup-password">Password</label>
@@ -41,8 +39,8 @@
 				</fieldset>
 				<input type="submit" name="continue" value="Continue">
 			</form>
-		</section>
+		</div>
 	</main>
-	<script type="text/javascript" src="script.js"></script>
+	<script src="script.js" type="text/javascript"></script>
 </body>
 </html>
