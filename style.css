@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 }
 fieldset {border: none;}
+legend {display: none;}
 button, input {
 	border: none;
 	outline: none;

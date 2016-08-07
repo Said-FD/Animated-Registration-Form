@@ -19,17 +19,19 @@
 			</button>
 		</div>
 		<div class="forms">
-			<form class="login-form login-button-active">
+			<form class="login-form login-button-active" action="#" method="post">
 				<fieldset>
+					<legend>Please, enter your email and password for login.</legend>
 					<label for="login-email">E-mail</label>
 					<input id="login-email" type="email" name="email" required>
 					<label for="login-password">Password</label>
 					<input id="login-password" type="password" name="password" required>
 				</fieldset>
-				<input type="submit" name="login" value="Login">
+				<input type="submit" value="Login">
 			</form>
-			<form class="signup-form">
+			<form class="signup-form" action="#" method="post">
 				<fieldset>
+					<legend>Please, enter your email, password and password confirmation for sign up.</legend>
 					<label for="signup-email">E-mail</label>
 					<input id="signup-email" type="email" name="email" required>
 					<label for="signup-password">Password</label>
@@ -37,7 +39,7 @@
 					<label for="signup-confirm-password">Confirm password</label>
 					<input id="signup-confirm-password" type="password" name="password" required>
 				</fieldset>
-				<input type="submit" name="continue" value="Continue">
+				<input type="submit" value="Continue">
 			</form>
 		</div>
 	</main>
