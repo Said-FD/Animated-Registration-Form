@@ -1,28 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
+var buttons = document.querySelector('.buttons');
+var loginButton = document.querySelector('.log-link');
+var signupButton = document.querySelector('.sign-link');
+var activeElements = document.querySelectorAll('[name="animated"]');
 
-	var loginButton = document.querySelector('.login-button');
-	var signupButton = document.querySelector('.signup-button');
-	var activeElements = [document.querySelector('.buttons'),
-						document.querySelector('.log-link'),
-						document.querySelector('.sign-link'),
-						document.querySelector('.login-underline'),
-						document.querySelector('.signup-underline'),
-						document.querySelector('.login-form'),
-						document.querySelector('.signup-form')];
+buttons.addEventListener('click', switcher);
 
-	loginButton.onclick = function(e) {
-		e.preventDefault();
-		for (var i = 0; i < activeElements.length; i++) {
-			activeElements[i].classList.remove('signup-button-active');
-			activeElements[i].classList.add('login-button-active');
-		}
-	}
+function switcher(e) {
+  if(e.target == loginButton) {
+    for (var i = 0; i < activeElements.length; i++) {
+      activeElements[i].classList.remove('signup-button-active');
+      activeElements[i].classList.add('login-button-active');
+    }
+  } else if(e.target == signupButton) {
+    for (var i = 0; i < activeElements.length; i++) {
+      activeElements[i].classList.remove('login-button-active');
+      activeElements[i].classList.add('signup-button-active');
+    }
+  }
+}
 
-	signupButton.onclick = function(e) {
-		e.preventDefault();
-		for (var i = 0; i < activeElements.length; i++) {
-			activeElements[i].classList.remove('login-button-active');
-			activeElements[i].classList.add('signup-button-active');
-		}
-	}
-});
+
+// Alternate Way
+/*var loginButton = document.querySelector('.log-link');
+var signupButton = document.querySelector('.sign-link');
+var activeElements = document.getElementsByName('animated');
+
+loginButton.onclick = function() {
+  for (var i = 0; i < activeElements.length; i++) {
+    activeElements[i].classList.remove('signup-button-active');
+    activeElements[i].classList.add('login-button-active');
+  }
+}
+
+signupButton.onclick = function() {
+  for (var i = 0; i < activeElements.length; i++) {
+    activeElements[i].classList.remove('login-button-active');
+    activeElements[i].classList.add('signup-button-active');
+  }
+}*/
