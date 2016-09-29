@@ -1,7 +1,7 @@
 var buttons = document.querySelector('.buttons');
 var loginButton = document.querySelector('.log-link');
 var signupButton = document.querySelector('.sign-link');
-var activeElements = document.querySelectorAll('[name="animated"]');
+var activeElements = document.querySelectorAll('[data-action="animated"]');
 
 buttons.addEventListener('click', switcher);
 
@@ -23,7 +23,7 @@ function switcher(e) {
 // Alternate Way
 /*var loginButton = document.querySelector('.log-link');
 var signupButton = document.querySelector('.sign-link');
-var activeElements = document.getElementsByName('animated');
+var activeElements = document.querySelectorAll('[data-action="animated"]');
 
 loginButton.onclick = function() {
   for (var i = 0; i < activeElements.length; i++) {
